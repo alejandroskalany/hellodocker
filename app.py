@@ -1,14 +1,24 @@
-from flask import Flask
+from flask import Flask, render_template, request
 
-hellodocker = Flask(__name__)
-@hellodocker.route("/")
+app = Flask(__name__, static_folder='static', template_folder='templates')
 
-def run():
-    return "\"Hey there docker\""
 
-if __name__ == "__main__":
-    hellodocker.run(host="0.0.0.0", port=int("3000"), debug=True)
+@app.route('/', methods=['GET','POST'])
 
+def home():
+    return render_template('home.html')
+
+@app.route('/surprise', methods=['GET','POST'])
+
+def surprise():
+    if request.method == 'POST':
+        return render_template('open.html')
+
+
+#if __name__ == "__main__":
+#    app.run(debug=True)
 
 # to build image
 # terminal -- docker build -t username/filename:versioninformation .
+# to container
+# docker container run -d -p 3000:3000 username/filename:versioninfo
