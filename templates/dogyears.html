@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Age in Dog Years</title>
+</head>
+
+<body>
+<h1>Your age in Dog Years</h1>
+        <label for="age">Your Current Age</label>
+        <form method="POST" action="/dogyears" id="ageresult">
+            <input type="text" name="age" id="age">
+            <input type="submit" value="Click for your age in dog years"/></form>
+</form></div>
+        {% if calculation_success == True %}
+        <br/>
+        <p>If you are {{input1}}, you are about {{result}} years old in dog years.</p>
+        {% endif %}
+    </form>
+<div><img src="https://i.insider.com/61705701fee39f0018fa7c03?width=1000&format=jpeg&auto=webp" alt="dog"></div>
+<div><form action="/age" method="post">
+    <p align="left"><a href="/age" ><button class=grey style="height:75px;width:150px">Reset</button></a></p>
+</body>
+
+</html>

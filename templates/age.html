@@ -7,8 +7,8 @@
 <body>
 <h1>Your age in Dog Years</h1>
         <label for="age">Your Current Age</label>
-        <form><input type="text" method="post" name="age" id="age"></form>
-        <div><p align="left"><a href="/ageresult" ><button class=grey style="height:75px;width:150px">Click for your age in dog years</button></a></p>
-        </form></div>
+        <form method="POST" action="/dogyears" id="ageresult">
+            <input type="text" name="age" id="age">
+            <input type="submit" value="Click for your age in dog years"/></form>
 </body>
 </html>
